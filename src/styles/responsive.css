@@ -1,0 +1,124 @@
+/* ==========================================================================
+   LOGMONITOR - RESPONSIVE STYLES
+   Desktop, Tablet, and Mobile Adaptations
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Large Tablets & Medium Desktops (max-width: 1200px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .error-summary-strip,
+  .alerts-overview-grid,
+  .reports-kpi-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablets (max-width: 992px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .main-content-wrapper {
+    margin-left: 0 !important;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.6);
+    z-index: 999;
+  }
+
+  .page-container {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .top-navbar {
+    padding: 0 1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Devices (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .stats-grid,
+  .error-summary-strip,
+  .alerts-overview-grid,
+  .reports-kpi-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar-date-display {
+    display: none;
+  }
+
+  .profile-info {
+    display: none;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-header-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .table-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar-wrap {
+    min-width: 100%;
+  }
+
+  .table-pagination {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .modal-dialog {
+    max-width: 95%;
+    margin: 1rem;
+  }
+
+  .settings-tabs-nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.25rem;
+  }
+}
